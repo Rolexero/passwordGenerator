@@ -30,6 +30,7 @@ function symbolsFunc() {
 }
 
 function generatePassword() {
+    let val = 2 + 3;
     let lengthVal = lenEl.value;
     let password = '';
 
@@ -38,20 +39,21 @@ function generatePassword() {
     }
 
     if (lowerEl.checked) {
-        password +=  lowerLettersFunc();
+        password += lowerLettersFunc();
     }
 
     if (numberEl.checked) {
-        password +=  numbersFunc();
+        password += numbersFunc();
     }
 
     if (symbolEl.checked) {
-        password +=  symbolsFunc();
+        password += symbolsFunc();
     }
 
+
     for (let index = password.length; index < lengthVal; index++) {
-            const passwordGenerator =  generatePass();
-            password += passwordGenerator;
+        const passwordGenerator = generatePass();
+        password += passwordGenerator;
     }
     return pwEl.innerText = password;
 }
@@ -82,7 +84,7 @@ generateEl.addEventListener('click', generatePassword);
 
 
 // copy to clipboard
-copyEl.addEventListener('click', ()=>{
+copyEl.addEventListener('click', () => {
     const textarea = document.createElement('textarea');
     const password = pwEl.innerText;
 
@@ -94,5 +96,3 @@ copyEl.addEventListener('click', ()=>{
     textarea.remove();
     alert('password copied to clipboard');
 })
-
-
