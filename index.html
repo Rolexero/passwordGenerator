@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="pw-container">
+        <div class="pw-header">
+            <div class="pw">
+               <span id="pw"></span> 
+                <button id="copy">copy to clipboard</button>
+            </div>    
+        </div>
+        <div class="pw-body">
+                <div class="form-control">
+                    <label for="len">Password length</label>
+                    <input type="number" id="len" min="8" max="30" id="len" value="20">
+                </div>
+                <div class="form-control">
+                    <label for="upper">Contain Uppercase letters</label>
+                    <input type="checkbox" id="upper">
+                </div>
+                <div class="form-control">
+                    <label for="lower">Contain Lowercase letters</label>
+                    <input type="checkbox" id="lower">
+                </div>
+                <div class="form-control">
+                    <label for="number">Contain number</label>
+                    <input type="checkbox" id="number">
+                </div>
+                <div class="form-control">
+                    <label for="symbol">Contain symbol</label>
+                    <input type="checkbox" id="symbol">
+                </div>
+                <button class="generate" id="generate">Generate Password</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
